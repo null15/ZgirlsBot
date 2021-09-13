@@ -37,7 +37,6 @@ client.on('ready', function () {
     console.log('WaifuEmpire is online');
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
-        typeScript: true,
         testServers: ['358344889231998977'],
     });
 });
