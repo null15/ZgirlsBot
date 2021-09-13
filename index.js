@@ -23,6 +23,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var discord_js_1 = __importStar(require("discord.js"));
+var wokcommands_1 = __importDefault(require("wokcommands"));
+var path_1 = __importDefault(require("path"));
 var dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 var client = new discord_js_1.default.Client({
@@ -33,5 +35,10 @@ var client = new discord_js_1.default.Client({
 });
 client.on('ready', function () {
     console.log('WaifuEmpire is online');
+    new wokcommands_1.default(client, {
+        commandsDir: path_1.default.join(__dirname, 'commands'),
+        typeScript: true,
+        testServers: ['358344889231998977'],
+    });
 });
 client.login(process.env.TOKEN);
