@@ -13,4 +13,12 @@ client.on('ready', () => {
     console.log('WaifuEmpire is online')
 })
 
+client.on('messageCreate', (message) => {
+    if (message.content === 'ping') {
+        message.reply({
+            content: 'pong',
+        })
+    }
+})
+
 client.login(process.env.TOKEN)

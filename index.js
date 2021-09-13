@@ -34,4 +34,11 @@ var client = new discord_js_1.default.Client({
 client.on('ready', function () {
     console.log('WaifuEmpire is online');
 });
+client.on('messageCreate', function (message) {
+    if (message.content === 'ping') {
+        message.reply({
+            content: 'pong',
+        });
+    }
+});
 client.login(process.env.TOKEN);
