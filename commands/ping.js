@@ -5,7 +5,7 @@ exports.default = {
     description: 'Replies with additions of 2 numbers',
     slash: 'both',
     testOnly: true,
-    callback: function (_a) {
+    callback: ({}) => {
         return 'pong';
     }
 };

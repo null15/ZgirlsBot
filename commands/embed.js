@@ -1,13 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var discord_js_1 = require("discord.js");
+const discord_js_1 = require("discord.js");
 exports.default = {
     category: 'testing',
     description: 'Sends an embed',
     permissions: ['ADMINISTRATOR'],
-    callback: function (_a) {
-        var message = _a.message, text = _a.text;
-        var embed = new discord_js_1.MessageEmbed()
+    callback: ({ message, text }) => {
+        const embed = new discord_js_1.MessageEmbed()
             .setTitle('Important Information')
             .setURL('https://discord.gg/s8es9d7nqU')
             .setDescription('The following rules applies to both Guild Members and Guests.')

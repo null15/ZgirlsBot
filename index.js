@@ -22,18 +22,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var discord_js_1 = __importStar(require("discord.js"));
-var wokcommands_1 = __importDefault(require("wokcommands"));
-var path_1 = __importDefault(require("path"));
-var dotenv_1 = __importDefault(require("dotenv"));
+const discord_js_1 = __importStar(require("discord.js"));
+const wokcommands_1 = __importDefault(require("wokcommands"));
+const path_1 = __importDefault(require("path"));
+const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-var client = new discord_js_1.default.Client({
+const client = new discord_js_1.default.Client({
     intents: [
         discord_js_1.Intents.FLAGS.GUILDS,
         discord_js_1.Intents.FLAGS.GUILD_MESSAGES
     ]
 });
-client.on('ready', function () {
+client.on('ready', () => {
     console.log('WaifuEmpire is online');
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
