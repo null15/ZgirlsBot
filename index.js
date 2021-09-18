@@ -34,7 +34,7 @@ const client = new discord_js_1.default.Client({
     ]
 });
 client.on('ready', () => {
-    console.log('WaifuEmpire is online');
+    console.log('Kuyou is online');
     new wokcommands_1.default(client, {
         commandsDir: path_1.default.join(__dirname, 'commands'),
         testServers: ['358344889231998977'],

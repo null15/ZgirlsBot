@@ -12,7 +12,7 @@ const client = new DiscordJS.Client({
 })
 
 client.on('ready', () => {
-    console.log('WaifuEmpire is online')
+    console.log('Kuyou is online')
 
     new WOKCommands(client, {
         commandsDir: path.join(__dirname, 'commands'),
