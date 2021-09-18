@@ -30,7 +30,7 @@ export default {
             },
             {
                 name: '🔻 Validation',
-                value: 'This is for Guild Members. If you recently joined this discord, head over to channel <#886231357825626134> and tell us your ingame-name to validate yourself!'
+                value: 'This is for Guild Members of WaifuEmpire. If you recently joined this discord, head over to channel <#886231357825626134> and tell us your ingame-name to validate yourself!'
             },
         ])
 
